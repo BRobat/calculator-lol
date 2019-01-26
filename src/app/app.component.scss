@@ -1,0 +1,35 @@
+$blackish: rgb(36,36,36);
+
+button {
+    background: $blackish;
+
+    width: 50px;
+    height: 50px;
+
+    border-color: grey;
+
+    color: white;
+    font-size: 24px;
+
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.container {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.result {
+    width: 150px;
+    background: $blackish;
+
+    color: white;
+    font-size: 24px;
+
+    border-color: grey;
+}
+
+.row {
+    min-height: 50px;
+    display: flex;
+}
