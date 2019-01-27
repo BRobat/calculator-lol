@@ -20,7 +20,7 @@ button {
 }
 
 .result {
-    width: 150px;
+    width: 200px;
     background: $blackish;
 
     color: white;
@@ -30,6 +30,18 @@ button {
 }
 
 .row {
-    min-height: 50px;
+    min-height: 25px;
     display: flex;
+}
+
+.btn-big {
+    width: 200px;
+    font-size: 18px;
+}
+
+.history {
+    padding: 10px 0px;
+    width: 200px;
+    background: $blackish;
+    color: white;
 }

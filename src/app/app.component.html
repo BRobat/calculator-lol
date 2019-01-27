@@ -1,31 +1,51 @@
 <div class="container">
   <div class="row">
     <div class="result">
-      {{value}}
+      {{displayNum1}} 
     </div>
   </div>
   <div class="row">
+    <div class="result">
+      {{displayOp}} {{displayNum2}}
+    </div>
+  </div>
+
+  <div class="row">
     <button (click)="clear()">ce</button>
-    <button (click)="append(' + ')">+</button>
+    <button (click)="back()"><-</button>
     <button (click)="result()" (keyup.enter)="result()">=</button>
-
+    <button (click)="appendOp('+')">+</button>
+    
+    
   </div>
-
+  
   <div class="row">
-    <button (click)="append('1')">1</button>
-    <button (click)="append('2')">2</button>
-    <button (click)="append('3')">3</button>
+    <button (click)="appendNum('1')">1</button>
+    <button (click)="appendNum('2')">2</button>
+    <button (click)="appendNum('3')">3</button>
+    <button (click)="appendOp('-')">-</button>
+    
   </div>
   <div class="row">
-    <button (click)="append('4')">4</button>
-    <button (click)="append('5')">5</button>
-    <button (click)="append('6')">6</button>
+    <button (click)="appendNum('4')">4</button>
+    <button (click)="appendNum('5')">5</button>
+    <button (click)="appendNum('6')">6</button>
+    <button (click)="appendOp('*')">*</button>
+    
   </div>
   <div class="row">
-    <button (click)="append('7')">7</button>
-    <button (click)="append('8')">8</button>
-    <button (click)="append('9')">9</button>
+    <button (click)="appendNum('7')">7</button>
+    <button (click)="appendNum('8')">8</button>
+    <button (click)="appendNum('9')">9</button>
+    <button (click)="appendOp('/')">/</button>
   </div>
+  <div class="row">
+      <button (click)="appendNum('0')">0</button>
+      <button>x</button>
+      <button>x</button>
+      <button (click)="appendOp('^')">^</button>
+  </div>
+  <button class="btn-big" (click)="clearHistory()">clear history</button>
   <div class="history" *ngFor="let h of history">
     {{h}}
   </div>
